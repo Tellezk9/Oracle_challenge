@@ -1,0 +1,349 @@
+body {
+    background: #E5E5E5;
+}
+
+.view {
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 90vh;
+    display: flex;
+}
+
+.leftView {
+    width: 70%;
+}
+
+.form {
+    margin-left: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 65%;
+}
+
+.textData {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelError {
+    margin-top: 10px;
+    font-size: 16px;
+    color: red;
+    border: none;
+    background: none;
+    opacity: 0.8;
+    font-family: cursive;
+}
+
+.textToProcess {
+    width: 90%;
+    margin-top: 40px;
+    font-size: 32px;
+    color: darkblue;
+    border: none;
+    background: none;
+    font-family: cursive;
+    min-height: 312px;
+    max-height: 311px;
+    max-width: 99%;
+    min-width: 100%;
+}
+
+.formButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.observation {
+    margin-bottom: 10px;
+}
+
+.observationText {
+    font-family: cursive;
+    font-size: 14px;
+    color: black;
+    opacity: 0.8;
+}
+
+.divSeparator {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.encryptButton {
+    background: #0A3871;
+    color: #D8DFE8;
+    height: 67px;
+    border-radius: 24px;
+    flex: 0.47;
+    font-size: 24px;
+    border: 1px solid #0A3871;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 1px;
+}
+
+.encryptButton:hover {
+    background: #0b2c55;
+}
+
+.encryptButton:active {
+    background: #08182b;
+}
+
+.decryptButton {
+    background: #D8DFE8;
+    color: darkblue;
+    height: 67px;
+    border-radius: 24px;
+    flex: 0.47;
+    font-size: 24px;
+    border: 1px solid #0A3871;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.decryptButton:hover {
+    background: #bdc2c9;
+}
+
+.decryptButton:active {
+    background: #90959a;
+}
+
+.centerView {
+    display: none;
+}
+
+.rightView {
+    /* background: pink; */
+    border-radius: 32px;
+    width: 30%;
+    overflow: hidden;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* lista vacia */
+
+.listEmpty {
+    width: auto;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image {
+    background-image: url("./img/Muneco.png");
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 320px;
+}
+
+.textEmpty {
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    font-family: cursive;
+    color: gray;
+}
+
+.smallLetter {
+    text-align: center;
+    font-size: 16px;
+    font-family: cursive;
+    color: gray;
+}
+
+
+/* lista con datos */
+
+.listFull {
+    width: auto;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards {
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    margin-top: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.card {
+    background: whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    word-break: break-all;
+}
+
+.card:hover {
+    background: rgb(237, 231, 231);
+}
+
+.card:active {
+    background: whitesmoke;
+}
+
+.labelCard {
+    font-family: cursive;
+    font-size: 20px;
+    margin: 10px;
+    color: #495057;
+}
+
+.copy {
+    width: 90%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.buttonClear {
+    background: white;
+    color: darkblue;
+    height: 67px;
+    width: 100%;
+    border-radius: 24px;
+    flex: 0.47;
+    font-size: 24px;
+    border: 1px solid #0A3871;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttonClear:hover {
+    background: rgb(225, 220, 220);
+}
+
+.buttonClear:active {
+    background: #9ba1a7;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    /* @media (max-width: 1624px) { */
+    .image {
+        display: none;
+    }
+    .view {
+        height: 100vmax;
+        flex-direction: column;
+    }
+    .leftView {
+        flex: 0.6;
+        width: auto;
+    }
+    .centerView {
+        flex: 0.02;
+        display: block;
+    }
+    .rightView {
+        flex: 0.36;
+        width: auto;
+    }
+    .form {
+        margin-left: 0px;
+        width: auto;
+    }
+    .textToProcess {
+        width: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .image {
+        display: none;
+    }
+    .view {
+        flex-direction: column;
+    }
+    .leftView {
+        height: 63%;
+        width: auto;
+    }
+    .centerView {
+        flex: 0.02;
+        display: block;
+    }
+    .rightView {
+        width: auto;
+    }
+    .form {
+        margin-left: 0px;
+        width: auto;
+        justify-content: flex-start;
+    }
+    .textData {
+        height: 60%;
+    }
+    .textToProcess {
+        width: auto;
+        font-size: 14px;
+        max-height: 50%;
+        min-height: 49%;
+    }
+    .divSeparator {
+        display: block;
+    }
+    .formButtons {
+        flex-direction: column;
+        height: 35%;
+    }
+    .buttons {
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        font-size: 14px;
+    }
+    .encryptButton {
+        font-size: 14px;
+    }
+    .decryptButton {
+        font-size: 14px;
+    }
+    .observationText {
+        font-size: 10px;
+    }
+    .observationSvg {
+        height: 10px;
+        width: 10px;
+    }
+    .textEmpty {
+        font-size: 14px;
+    }
+    .smallLetter {
+        font-size: 8px;
+    }
+    .buttonClear {
+        font-size: 14px;
+        height: 24px;
+    }
+    .labelCard {
+        font-size: 14px;
+    }
+}

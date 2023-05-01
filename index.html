@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="shortcut icon" href="./img/Vector.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="view">
+        <div class="leftView">
+            <div class="logo">
+                <img src="./img/Vector.png" alt="">
+            </div>
+            <div class="form">
+                <div class="textData">
+                    <textarea name="text" id="textToProcess" class="textToProcess" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+                    <!-- <input type="text" id="textToProcess" class="textToProcess" placeholder="Ingrese el texto aqui"> -->
+                    <label class="labelError" id="labelError" form="textToProcess"></label>
+                </div>
+                <div class="formButtons">
+                    <div class="observation">
+                        <label class="observationText">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill observationSvg" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                              </svg>
+                            Solo letras minúsculas y sin acentos
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <input type="button" id="encrypt" class="encryptButton" value="Encriptar!">
+                        <div class="divSeparator"></div>
+                        <input type="button" id="decrypt" class="decryptButton" value="Desencriptar!">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="centerView"></div>
+        <div class="rightView">
+            <div class="listEmpty" id="listEmpty">
+                <div class="image"></div>
+                <div class="textEmpty">
+                    <p>Ningún mensaje fue <br> encontrado</p>
+                    <p class="smallLetter">Ingresa el texto que desees encriptar o<br> desencriptar.</p>
+                </div>
+            </div>
+            <div class="listFull" id="listFull">
+                <div class="cards" id="cards"></div>
+                <div class="copy">
+                    <input type="button" class="buttonClear" id="buttonClear" value="Borrar Listas">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./controller/controller.js"></script>
+</body>
+
+</html>
