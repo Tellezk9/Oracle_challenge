@@ -1,3 +1,7 @@
+:root {
+    --fontFamily: 'Inter', sans-serif;
+}
+
 body {
     background: #E5E5E5;
 }
@@ -35,7 +39,7 @@ body {
     border: none;
     background: none;
     opacity: 0.8;
-    font-family: cursive;
+    font-family: var(--fontFamily);
 }
 
 .textToProcess {
@@ -45,7 +49,8 @@ body {
     color: darkblue;
     border: none;
     background: none;
-    font-family: cursive;
+    font-family: var(--fontFamily);
+    resize: none;
     min-height: 312px;
     max-height: 311px;
     max-width: 99%;
@@ -62,7 +67,7 @@ body {
 }
 
 .observationText {
-    font-family: cursive;
+    font-family: var(--fontFamily);
     font-size: 14px;
     color: black;
     opacity: 0.8;
@@ -155,14 +160,16 @@ body {
     font-weight: bold;
     text-align: center;
     font-size: 24px;
-    font-family: cursive;
+    font-family: var(--fontFamily);
+    ;
     color: gray;
 }
 
 .smallLetter {
     text-align: center;
     font-size: 16px;
-    font-family: cursive;
+    font-family: var(--fontFamily);
+    ;
     color: gray;
 }
 
@@ -208,7 +215,8 @@ body {
 }
 
 .labelCard {
-    font-family: cursive;
+    font-family: var(--fontFamily);
+    ;
     font-size: 20px;
     margin: 10px;
     color: #495057;
